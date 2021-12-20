@@ -16,7 +16,7 @@ client = TelegramClient('Telethon Anonymous Bot',
                     api_id = Credentials.API_ID,
                     api_hash=Credentials.API_HASH).start(bot_token=Credentials.BOT_TOKEN)
 
-DEFAULT_START = ("Hey! I am ANONYMOUS SENDER BOT.\n\n"
+DEFAULT_START = ("Hey! I am assistant bot and now helping for rainbow channel.\n\n"
                  "Just Forward me some messages or media and I will anonymize the sender.\n\n"
                  "Please support the developer by joining the support channel.")
 
@@ -33,8 +33,8 @@ async def startmessage(event):
       ok = event.chat_id
       await client.send_message(event.chat_id,
                                 message=START_TEXT,
-                                buttons=[[Button.url("Deploy Clone","https://heroku.com/deploy?template=https://github.com/ImJanindu/Anonymous-bot"),
-                                         Button.url("Support Channel","https://t.me/Infinity_BOTs")]])                                                                
+                                buttons=[[Button.url("Deploy Clone","https://t.me/joinchat/HPXE9t6rejEzNDll"),
+                                         Button.url("Support Channel","https://t.me/joinchat/bJhearifqj05ZDhl")]])                                                                
     if event.message.media:
       await client.send_message(event.chat_id,file=event.message.media)
     else:
